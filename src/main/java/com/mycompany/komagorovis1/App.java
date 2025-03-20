@@ -5,6 +5,11 @@
  */
 package com.mycompany.komagorovis1;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  *
  * @author Student
@@ -57,6 +62,8 @@ public class App extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
@@ -103,6 +110,11 @@ public class App extends javax.swing.JFrame {
         jLabel3.setText("Массив после замены");
 
         jButton1.setText("Решить");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -151,6 +163,11 @@ public class App extends javax.swing.JFrame {
         jLabel6.setText("Заполнить массив А[1..6] случайными числами в диапазоне -6 до 6. Найти количество положительных элементов.");
 
         jButton2.setText("Решить");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -207,10 +224,23 @@ public class App extends javax.swing.JFrame {
         });
 
         jButton3.setText("Решить");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel12.setText("Общая сумма платежей");
 
         jLabel13.setText("Номера квартир, платежи которых превысили заданное значение");
+
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+
+        jLabel24.setText("Номера квартив которые оплатили:");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -238,9 +268,13 @@ public class App extends javax.swing.JFrame {
                         .addComponent(jTextField7))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField8)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 84, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,20 +288,24 @@ public class App extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addComponent(jButton3))
         );
 
@@ -303,6 +341,11 @@ public class App extends javax.swing.JFrame {
         });
 
         jButton4.setText("Решить");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -364,6 +407,11 @@ public class App extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jButton5.setText("Решить");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -413,6 +461,11 @@ public class App extends javax.swing.JFrame {
         jLabel19.setText(" Определить размер каждого слова из заданного текста (слова разделены пробелами).");
 
         jButton6.setText("Решить");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -567,6 +620,354 @@ public class App extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField10ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                                        
+    jTextField1.setText(""); // Поле для исходного массива
+    jTextField2.setText(""); // Поле для измененного массива
+
+    System.out.println("9. В заданном массиве найти максимальный элемент. Элементы, стоящие после\n" +
+"максимального элемента заменить нулями.");                                      
+
+    int size = 10;
+
+    // Создаем объект Random для генерации случайных чисел
+    Random random = new Random();
+
+    // Инициализируем массив заданного размера
+    int[] array = new int[size];
+
+    // Заполняем массив случайными числами от 0 до 99
+    for (int i = 0; i < array.length; i++) {
+        array[i] = random.nextInt(100);
+    }
+
+    // Формируем строку для исходного массива без дополнительных описаний
+    StringBuilder originalArrayText = new StringBuilder();
+    for (int num : array) {
+        originalArrayText.append(num).append(" ");
+    }
+
+    // Выводим исходный массив в консоль и GUI
+    System.out.println(originalArrayText.toString().trim());
+    jTextField1.setText(originalArrayText.toString().trim());
+
+    // Находим максимальный элемент в массиве и его индекс
+    int maxElement = array[0]; // Предполагаем, что первый элемент максимальный
+    int maxIndex = 0; // Индекс максимального элемента
+
+    // Проходим по массиву, начиная со второго элемента
+    for (int i = 1; i < array.length; i++) {
+        if (array[i] > maxElement) { // Если текущий элемент больше максимума
+            maxElement = array[i]; // Обновляем значение максимума
+            maxIndex = i; // Обновляем индекс максимума
+        }
+    }
+
+    // Заменяем все элементы после максимального на нули
+    for (int i = maxIndex + 1; i < array.length; i++) {
+        array[i] = 0;
+    }
+
+    // Формируем строку для измененного массива без дополнительных описаний
+    StringBuilder modifiedArrayText = new StringBuilder();
+    for (int num : array) {
+        modifiedArrayText.append(num).append(" ");
+    }
+
+    // Выводим измененный массив в консоль и GUI
+    System.out.println(modifiedArrayText.toString().trim());
+    jTextField2.setText(modifiedArrayText.toString().trim());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+ 
+
+        System.out.println("34. Заполнить массив А[1..6] случайными числами в диапазоне -6 до 6. Найти количество положительных элементов.");
+        jTextField3.setText("");
+
+        int size = 6; // Размер массива (количество элементов)
+        int[] A = new int[size]; // Создаем массив A размером 6 элементов
+
+        Random random = new Random(); // Создаем объект Random для генерации случайных чисел
+
+        jTextField3.setText(jTextField3.getText());
+        System.out.println("Случайно сгенерированный массив:");
+
+        // Заполняем массив случайными числами в диапазоне от -6 до 6
+        for (int i = 0; i < size; i++) {
+            A[i] = random.nextInt(13) - 6;
+            
+            jTextField3.setText(jTextField3.getText() + A[i] + " ");
+            System.out.print(A[i] + " "); // Выводим каждый элемент массива в консоль
+        }
+
+        // Переходим на новую строку после вывода массива
+        System.out.println();
+        jTextField4.setText("");
+
+        int positiveCount = 0; // Переменная для подсчета количества положительных элементов
+
+        // Проходим по каждому элементу массива
+        for (int num : A) {
+            if (num > 0) { // Проверяем, является ли текущий элемент положительным
+                positiveCount++; // Если да, увеличиваем счетчик положительных элементов
+            }
+        }
+
+        // Выводим результат: количество положительных элементов
+        jTextField4.setText(jTextField4.getText() + positiveCount);
+        System.out.println("Количество положительных элементов: " + positiveCount);
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+                                    
+   // Очищаем текстовые поля перед новым выполнением
+    jTextField5.setText(""); // Поле для случайно сгенерированных платежей
+    jTextField6.setText(""); // Поле для ввода заданного значения
+    jTextField7.setText(""); // Поле для общей суммы платежей
+    jTextField13.setText(""); // Поле для номеров квартир с нулевыми платежами
+    jTextField8.setText(""); // Поле для номеров квартир с платежами, превышающими заданное значение
+
+    // Выводим описание задачи в консоль
+    System.out.println("59. В одномерном массиве хранится информация о коммунальных платежах\n" +
+                       "каждой из семей 20-квартирного дома за месяц. Определить: а) общую сумму\n" +
+                       "платежей; б) номера квартир, которые не оплатили коммунальные услуги; в)\n" +
+                       "номера квартир, платежи которых превысили заданное значение.");
+
+    int size = 20; // Устанавливаем количество квартир (размер массива)
+    double[] payments = new double[size]; // Создаем массив для хранения платежей каждой квартиры
+
+    Random random = new Random(); // Создаем объект Random для генерации случайных чисел
+
+    // Генерируем случайные значения платежей для каждой квартиры
+    StringBuilder generatedPaymentsText = new StringBuilder("Случайно сгенерированные коммунальные платежи:\n");
+    for (int i = 0; i < size; i++) {
+        payments[i] = random.nextInt(3801); // Генерируем число от 0 до 3800 как платеж для квартиры
+        generatedPaymentsText.append(String.format("Квартира %d: %.2f%n", (i + 1), payments[i])); // Добавляем строку для GUI
+        System.out.printf("Квартира %d: %.2f%n", (i + 1), payments[i]); // Выводим платеж для каждой квартиры в консоль
+    }
+
+    // Устанавливаем сгенерированные платежи в GUI
+    jTextField5.setText(generatedPaymentsText.toString());
+
+    // Вычисляем общую сумму всех платежей
+    double totalSum = 0;
+    for (double payment : payments) {
+        totalSum += payment; // Суммируем все платежи
+    }
+    System.out.println("\nОбщая сумма платежей: " + totalSum); // Выводим общую сумму в консоль
+    jTextField7.setText("Общая сумма платежей: " + totalSum); // Устанавливаем общую сумму в GUI
+
+    // Находим номера квартир, которые не оплатили коммунальные услуги
+    List<Integer> unpaidApartments = new ArrayList<>(); // Создаем список для хранения номеров таких квартир
+    for (int i = 0; i < size; i++) {
+        if (payments[i] == 0) { // Если платеж равен 0, значит, квартира не оплатила услуги
+            unpaidApartments.add(i + 1); // Добавляем номер квартиры в список
+        }
+    }
+
+    // Проверяем, есть ли квартиры, которые не оплатили услуги
+    if (unpaidApartments.isEmpty()) {
+        System.out.println("Все квартиры оплатили коммунальные услуги."); // Если список пуст, выводим соответствующее сообщение
+        jTextField13.setText("Все квартиры оплатили коммунальные услуги.");
+    } else {
+        System.out.print("Номера квартир, которые не оплатили коммунальные услуги: "); // В противном случае выводим номера квартир
+        for (int apartment : unpaidApartments) {
+            System.out.print(apartment + " "); // Выводим каждый номер квартиры
+        }
+        System.out.println();
+
+        // Формируем строку для GUI
+        String unpaidApartmentsText = "Номера квартир, которые не оплатили коммунальные услуги: ";
+        for (int apartment : unpaidApartments) {
+            unpaidApartmentsText += apartment + " ";
+        }
+        jTextField13.setText(unpaidApartmentsText);
+    }
+
+    // Запрашиваем у пользователя заданное значение для сравнения платежей
+    double threshold = Double.parseDouble(jTextField6.getText()); // Получаем значение из JTextField
+
+    // Находим номера квартир, чьи платежи превышают заданное значение
+    List<Integer> highPaymentsApartments = new ArrayList<>(); // Создаем список для хранения таких номеров квартир
+    for (int i = 0; i < size; i++) {
+        if (payments[i] > threshold) { // Если платеж больше заданного значения
+            highPaymentsApartments.add(i + 1); // Добавляем номер квартиры в список
+        }
+    }
+
+    // Проверяем, есть ли квартиры, чьи платежи превысили заданное значение
+    if (highPaymentsApartments.isEmpty()) {
+        System.out.println("Нет квартир, чьи платежи превысили заданное значение."); // Если список пуст, выводим соответствующее сообщение
+        jTextField8.setText("Нет квартир, чьи платежи превысили заданное значение.");
+    } else {
+        System.out.print("Номера квартир, платежи которых превысили заданное значение: "); // В противном случае выводим номера квартир
+        for (int apartment : highPaymentsApartments) {
+            System.out.print(apartment + " "); // Выводим каждый номер квартиры
+        }
+        System.out.println();
+
+        // Формируем строку для GUI
+        String highPaymentsApartmentsText = "Номера квартир, платежи которых превысили заданное значение: ";
+        for (int apartment : highPaymentsApartments) {
+            highPaymentsApartmentsText += apartment + " ";
+        }
+        jTextField8.setText(highPaymentsApartmentsText);
+    }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+  // Вывод нового задания
+        System.out.println("Задание 34: Вывести на экран матрицу 10x8, элементами которой являются целые");
+        System.out.println("случайные числа из интервала [19,49]. Определить минимальный элемент в");
+        System.out.println("каждом столбце и выбрать из них максимальный.\n");
+
+        // Вывод исходного задания
+        System.out.println("Задание: В двумерном массиве числа, кратные n, заменить частными от деления на n.");
+        System.out.println("Если таких чисел нет, то вывести на экран сообщение об этом.\n");
+
+        int[][] array = {
+            {12, 15, 20, 25, 30},
+            {8, 16, 24, 32, 40},
+            {5, 10, 15, 20, 25},
+            {7, 14, 21, 28, 35}
+        };
+        System.out.println("Исходный массив:");
+        printArray(array);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите число n: ");
+        int n = scanner.nextInt();
+        int rows = array.length;
+        int cols = array[0].length;
+        double[][] modifiedArray = new double[rows][cols];
+        boolean found = false;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (array[i][j] % n == 0) { 
+                    modifiedArray[i][j] = (double) array[i][j] / n;
+                    found = true; 
+                } else {
+                    modifiedArray[i][j] = array[i][j];
+                }
+            }
+        }
+        if (!found) {
+            System.out.println("В массиве нет чисел, кратных " + n + ".");
+        } else {
+            System.out.println("\nИзмененный массив:");
+            printArray(modifiedArray);
+        }
+    }
+    public static void printArray(int[][] array) {
+        for (int[] row : array) {
+            for (int value : row) {
+                System.out.printf("%4d ", value);
+            }
+            System.out.println();
+        }
+    }
+    public static void printArray(double[][] array) {
+        for (double[] row : array) {
+            for (double value : row) {
+                System.out.printf("%8.2f ", value); 
+            }
+            System.out.println();
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+ // Задание: Вывести матрицу 10x8 с элементами из диапазона [19, 49]
+        // Найти минимальные значения в каждом столбце и определить максимальное среди них.
+
+        // Определяем количество строк и столбцов матрицы
+        int rows = 10;
+        int cols = 8;
+
+        // Создаем двумерный массив (матрицу) размером 10x8
+        int[][] matrix = new int[rows][cols];
+
+        // Инициализируем объект Random для генерации случайных чисел
+        Random random = new Random();
+
+        // Заполняем матрицу случайными числами из диапазона [19, 49]
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix[i][j] = random.nextInt(31) + 19; // Генерация числа от 19 до 49
+            }
+        }
+
+        // Выводим заполненную матрицу на экран
+        System.out.println("Матрица:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.printf("%4d", matrix[i][j]); // Форматированный вывод чисел
+            }
+            System.out.println(); // Переход на новую строку после каждой строки матрицы
+        }
+
+        // Находим минимальные значения в каждом столбце матрицы
+        int[] minInColumns = new int[cols]; // Массив для хранения минимальных значений каждого столбца
+
+        // Проходим по каждому столбцу матрицы
+        for (int j = 0; j < cols; j++) {
+            minInColumns[j] = matrix[0][j]; // Предполагаем, что первый элемент столбца является минимальным
+
+            // Сравниваем остальные элементы столбца с текущим минимумом
+            for (int i = 1; i < rows; i++) {
+                if (matrix[i][j] < minInColumns[j]) { // Если найден меньший элемент
+                    minInColumns[j] = matrix[i][j]; // Обновляем минимальное значение для этого столбца
+                }
+            }
+        }
+
+        // Выводим минимальные значения каждого столбца
+        System.out.println("\nМинимальные значения в каждом столбце:");
+        for (int j = 0; j < cols; j++) {
+            System.out.printf("Столбец %d: %d\n", j + 1, minInColumns[j]);
+        }
+
+        // Находим максимальное значение среди минимальных значений столбцов
+        int maxOfMin = minInColumns[0]; // Предполагаем, что минимальное значение первого столбца является максимальным
+
+        // Сравниваем минимальные значения других столбцов с текущим максимумом
+        for (int j = 1; j < cols; j++) {
+            if (minInColumns[j] > maxOfMin) { // Если найдено большее значение
+                maxOfMin = minInColumns[j]; // Обновляем максимальное значение
+            }
+        }
+
+        // Выводим результат: максимальное значение среди минимальных значений столбцов
+        System.out.println("\nМаксимальный элемент среди минимальных значений столбцов: " + maxOfMin);
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+  // Задание: Определить размер каждого слова из заданного текста (слова разделены пробелами).
+
+        // Выводим описание задачи
+        System.out.println("9. Определить размер каждого слова из заданного текста (слова разделены пробелами).");
+
+        // Определяем исходный текст, состоящий из нескольких слов, разделенных пробелами
+        String text = "Привет это урок информатики на втором курсе";
+
+        // Разделяем текст на массив слов, используя пробел как разделитель
+        // Метод split(" ") разбивает строку на части по указанному разделителю (пробел в данном случае)
+        String[] words = text.split(" ");
+
+        // Проходим по каждому слову в массиве words
+        for (String word : words) {
+            // Для каждого слова выводим само слово и его длину
+            // Метод length() возвращает количество символов в строке
+            System.out.println("Слово: " + word + ", Длина: " + word.length());
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -627,6 +1028,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -659,6 +1061,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
