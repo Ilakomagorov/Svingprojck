@@ -4,11 +4,35 @@
  * and open the template in the editor.
  */
 package com.mycompany.komagorovis1;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JMenuBar;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.JTabbedPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.UIManager;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import java.awt.EventQueue;
+
+import java.util.Random;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import java.io.*;
 
 /**
  *
@@ -70,30 +94,44 @@ public class App extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jLabel25 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jTextField9 = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -132,11 +170,11 @@ public class App extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addGap(41, 41, 41)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 88, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(22, 22, 22))
+                .addGap(138, 138, 138))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,8 +188,9 @@ public class App extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 276, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                .addGap(58, 58, 58)
+                .addComponent(jButton1)
+                .addContainerGap(506, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("9", jPanel4);
@@ -184,10 +223,11 @@ public class App extends javax.swing.JFrame {
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 118, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(44, 44, 44))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,8 +241,9 @@ public class App extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 280, Short.MAX_VALUE)
-                .addComponent(jButton2))
+                .addGap(51, 51, 51)
+                .addComponent(jButton2)
+                .addContainerGap(517, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("34", jPanel10);
@@ -246,9 +287,6 @@ public class App extends javax.swing.JFrame {
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton3))
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel7)
@@ -275,6 +313,10 @@ public class App extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 84, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(33, 33, 33))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,8 +347,9 @@ public class App extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
                     .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
-                .addComponent(jButton3))
+                .addGap(34, 34, 34)
+                .addComponent(jButton3)
+                .addContainerGap(408, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("59", jPanel11);
@@ -334,12 +377,6 @@ public class App extends javax.swing.JFrame {
 
         jLabel16.setText("Введите число n");
 
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
-            }
-        });
-
         jButton4.setText("Решить");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -347,64 +384,86 @@ public class App extends javax.swing.JFrame {
             }
         });
 
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Заголовок 4", "Заголовок 5"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        jLabel25.setText("Изменение матрицы");
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Заголовок 5"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel14)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel15)
-                        .addGap(26, 26, 26)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 630, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton4))
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel15)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel16)
+                                .addGap(71, 71, 71)
+                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel25)))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 553, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(405, 405, 405)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel14)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 288, Short.MAX_VALUE)
-                .addComponent(jButton4))
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(302, 302, 302))
         );
 
         jTabbedPane4.addTab("9", jPanel5);
 
-        jLabel17.setText("34. Вывести на экран матрицу 10x8, элементами которой являются целые случайные числа из интервала [19,49]. Определить минимальный элемент в каждом столбце и выбрать из них максимальный.");
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "1", "2", "3", "4", "5l", "6", "7", "8"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        jLabel17.setText("<html>34. Вывести на экран матрицу 10x8, элементами которой являются целые случайные числа из интервала [19,49].<br> Определить минимальный элемент в каждом столбце и выбрать из них максимальный.");
 
         jButton5.setText("Решить");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -413,32 +472,65 @@ public class App extends javax.swing.JFrame {
             }
         });
 
+        jLabel26.setText("Определенное число:");
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Заголовок 5", "Заголовок 6", "Заголовок 7", "Заголовок 8", "Заголовок 9", "Заголовок 10"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable4);
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton5)
-                    .addComponent(jLabel17))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel26)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(232, 232, 232)
+                        .addComponent(jButton5))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(525, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jLabel17)
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
                 .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
-                .addComponent(jButton5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton5)
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("34", jPanel6);
@@ -467,6 +559,10 @@ public class App extends javax.swing.JFrame {
             }
         });
 
+        jLabel27.setText("Строка текста:");
+
+        jLabel28.setText("Размер каждого слова");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -474,16 +570,37 @@ public class App extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addComponent(jLabel19)
                 .addGap(0, 648, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton6))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(432, 432, 432)
+                        .addComponent(jButton6))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel27)
+                            .addComponent(jLabel28))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+                            .addComponent(jTextField14))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 352, Short.MAX_VALUE)
-                .addComponent(jButton6))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel28))
+                .addGap(102, 102, 102)
+                .addComponent(jButton6)
+                .addContainerGap(469, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("9", jPanel7);
@@ -493,22 +610,34 @@ public class App extends javax.swing.JFrame {
         jLabel21.setText("Ввести строку");
 
         jButton7.setText("Решить");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jLabel29.setText("Наименьшая цифра:");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(469, 469, 469)
+                .addComponent(jButton7)
+                .addContainerGap(559, Short.MAX_VALUE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel20)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jLabel21)
-                        .addGap(61, 61, 61)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 587, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton7))
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel21))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+                            .addComponent(jTextField11))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -517,9 +646,14 @@ public class App extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 312, Short.MAX_VALUE)
-                .addComponent(jButton7))
+                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addComponent(jButton7)
+                .addContainerGap(513, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("34", jPanel8);
@@ -529,6 +663,19 @@ public class App extends javax.swing.JFrame {
         jLabel23.setText("Исходная строка");
 
         jButton8.setText("Рещить");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField17ActionPerformed(evt);
+            }
+        });
+
+        jLabel30.setText("Измененная строка");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -537,13 +684,18 @@ public class App extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton8)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(jLabel22)
-                        .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(80, 80, 80))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel23)
-                            .addGap(33, 33, 33)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 637, Short.MAX_VALUE))
+                            .addComponent(jLabel30))
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField17)
+                            .addComponent(jTextField12))))
+                .addGap(637, 637, 637))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -552,10 +704,14 @@ public class App extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 309, Short.MAX_VALUE)
+                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
                 .addComponent(jButton8)
-                .addContainerGap())
+                .addContainerGap(563, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("59", jPanel9);
@@ -567,7 +723,7 @@ public class App extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -615,10 +771,6 @@ public class App extends javax.swing.JFrame {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                                         
@@ -818,67 +970,93 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-  // Вывод нового задания
-        System.out.println("Задание 34: Вывести на экран матрицу 10x8, элементами которой являются целые");
-        System.out.println("случайные числа из интервала [19,49]. Определить минимальный элемент в");
-        System.out.println("каждом столбце и выбрать из них максимальный.\n");
+      // Очищаем таблицы перед новым выполнением
+    jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        new Object[][] {},
+        new String[] {"Title 1", "Title 2", "Title 3", "Title 4", "Title 5"}
+    ));
+    
+    jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        new Object[][] {},
+        new String[] {"Title 1", "Title 2", "Title 3", "Title 4", "Title 5"}
+    ));
 
-        // Вывод исходного задания
-        System.out.println("Задание: В двумерном массиве числа, кратные n, заменить частными от деления на n.");
-        System.out.println("Если таких чисел нет, то вывести на экран сообщение об этом.\n");
+    // Вывод нового задания
+    System.out.println("Задание 34: Вывести на экран матрицу 10x8, элементами которой являются целые");
+    System.out.println("случайные числа из интервала [19,49]. Определить минимальный элемент в");
+    System.out.println("каждом столбце и выбрать из них максимальный.\n");
 
-        int[][] array = {
-            {12, 15, 20, 25, 30},
-            {8, 16, 24, 32, 40},
-            {5, 10, 15, 20, 25},
-            {7, 14, 21, 28, 35}
-        };
-        System.out.println("Исходный массив:");
-        printArray(array);
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите число n: ");
-        int n = scanner.nextInt();
-        int rows = array.length;
-        int cols = array[0].length;
-        double[][] modifiedArray = new double[rows][cols];
-        boolean found = false;
+    // Вывод исходного задания
+    System.out.println("Задание: В двумерном массиве числа, кратные n, заменить частными от деления на n.");
+    System.out.println("Если таких чисел нет, то вывести на экран сообщение об этом.\n");
 
+    // Исходная матрица
+    int[][] array = {
+        {12, 15, 20, 25, 30},
+        {8, 16, 24, 32, 40},
+        {5, 10, 15, 20, 25},
+        {7, 14, 21, 28, 35}
+    };
+
+        DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+        for (int i = 0; i < array.length; i++) {
+            // Преобразуем строку матрицы array[i] в Object[]
+            Object[] row = new Object[array[i].length];
+            for (int j = 0; j < array[i].length; j++) {
+                row[j] = array[i][j]; // Копируем значение из int[] в Object[]
+            }
+            model.addRow(row); // Добавляем строку в таблицу
+        }
+    // Получаем число n из jPasswordField1
+    String nText = new String(jTextField9.getText());
+    if (nText.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Введите число n!");
+        return;
+    }
+    int n = Integer.parseInt(nText);
+
+    // Размеры матрицы
+    int rows = array.length;
+    int cols = array[0].length;
+
+    // Создаем новую матрицу для измененных значений
+    double[][] modifiedArray = new double[rows][cols];
+    boolean found = false;
+
+    // Проходим по каждому элементу матрицы
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (array[i][j] % n == 0) { 
+                modifiedArray[i][j] = (double) array[i][j] / n;
+                found = true; 
+            } else {
+                modifiedArray[i][j] = array[i][j];
+            }
+        }
+    }
+
+    // Если не найдено ни одного числа, кратного n
+    if (!found) {
+        JOptionPane.showMessageDialog(this, "В массиве нет чисел, кратных " + n + ".");
+    } else {
+        // Заполняем jTable3 измененной матрицей
+        DefaultTableModel modifiedModel = (DefaultTableModel) jTable3.getModel();
         for (int i = 0; i < rows; i++) {
+            Object[] row = new Object[cols];
             for (int j = 0; j < cols; j++) {
-                if (array[i][j] % n == 0) { 
-                    modifiedArray[i][j] = (double) array[i][j] / n;
-                    found = true; 
-                } else {
-                    modifiedArray[i][j] = array[i][j];
-                }
+                row[j] = modifiedArray[i][j];
             }
+            modifiedModel.addRow(row);
         }
-        if (!found) {
-            System.out.println("В массиве нет чисел, кратных " + n + ".");
-        } else {
-            System.out.println("\nИзмененный массив:");
-            printArray(modifiedArray);
-        }
-    }
-    public static void printArray(int[][] array) {
-        for (int[] row : array) {
-            for (int value : row) {
-                System.out.printf("%4d ", value);
-            }
-            System.out.println();
-        }
-    }
-    public static void printArray(double[][] array) {
-        for (double[] row : array) {
-            for (double value : row) {
-                System.out.printf("%8.2f ", value); 
-            }
-            System.out.println();
-        }        // TODO add your handling code here:
+    }  
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
- // Задание: Вывести матрицу 10x8 с элементами из диапазона [19, 49]
+  // Очищаем таблицу перед новым выполнением
+        DefaultTableModel model = (DefaultTableModel) jTable4.getModel();
+        model.setRowCount(0); // Очистка таблицы
+
+        // Задание: Вывести матрицу 10x8 с элементами из диапазона [19, 49]
         // Найти минимальные значения в каждом столбце и определить максимальное среди них.
 
         // Определяем количество строк и столбцов матрицы
@@ -893,18 +1071,12 @@ public class App extends javax.swing.JFrame {
 
         // Заполняем матрицу случайными числами из диапазона [19, 49]
         for (int i = 0; i < rows; i++) {
+            Object[] row = new Object[cols];
             for (int j = 0; j < cols; j++) {
                 matrix[i][j] = random.nextInt(31) + 19; // Генерация числа от 19 до 49
+                row[j] = matrix[i][j]; // Добавляем значение в строку для jTable4
             }
-        }
-
-        // Выводим заполненную матрицу на экран
-        System.out.println("Матрица:");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                System.out.printf("%4d", matrix[i][j]); // Форматированный вывод чисел
-            }
-            System.out.println(); // Переход на новую строку после каждой строки матрицы
+            model.addRow(row); // Добавляем строку в jTable4
         }
 
         // Находим минимальные значения в каждом столбце матрицы
@@ -922,12 +1094,6 @@ public class App extends javax.swing.JFrame {
             }
         }
 
-        // Выводим минимальные значения каждого столбца
-        System.out.println("\nМинимальные значения в каждом столбце:");
-        for (int j = 0; j < cols; j++) {
-            System.out.printf("Столбец %d: %d\n", j + 1, minInColumns[j]);
-        }
-
         // Находим максимальное значение среди минимальных значений столбцов
         int maxOfMin = minInColumns[0]; // Предполагаем, что минимальное значение первого столбца является максимальным
 
@@ -938,36 +1104,138 @@ public class App extends javax.swing.JFrame {
             }
         }
 
-        // Выводим результат: максимальное значение среди минимальных значений столбцов
-        System.out.println("\nМаксимальный элемент среди минимальных значений столбцов: " + maxOfMin);
-            // TODO add your handling code here:
+        // Выводим результат в jTextField10
+        jTextField10.setText("Максимальный элемент среди минимальных значений столбцов: " + maxOfMin);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-  // Задание: Определить размер каждого слова из заданного текста (слова разделены пробелами).
+ // Очищаем поле вывода перед новым выполнением
+        jTextField15.setText("");
 
-        // Выводим описание задачи
+        // Задание: Определить размер каждого слова из заданного текста (слова разделены пробелами).
         System.out.println("9. Определить размер каждого слова из заданного текста (слова разделены пробелами).");
 
-        // Определяем исходный текст, состоящий из нескольких слов, разделенных пробелами
-        String text = "Привет это урок информатики на втором курсе";
+        // Считываем текст из jTextField14
+        String text = jTextField14.getText();
+
+        // Проверяем, что текст не пустой
+        if (text == null || text.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Введите текст в поле ввода!");
+            return;
+        }
 
         // Разделяем текст на массив слов, используя пробел как разделитель
-        // Метод split(" ") разбивает строку на части по указанному разделителю (пробел в данном случае)
         String[] words = text.split(" ");
+
+        // Создаем StringBuilder для формирования результата
+        StringBuilder result = new StringBuilder();
 
         // Проходим по каждому слову в массиве words
         for (String word : words) {
-            // Для каждого слова выводим само слово и его длину
-            // Метод length() возвращает количество символов в строке
-            System.out.println("Слово: " + word + ", Длина: " + word.length());
-        }        // TODO add your handling code here:
+            if (!word.isEmpty()) { // Пропускаем пустые строки (на случай лишних пробелов)
+                result.append("Слово: ").append(word).append(", Длина: ").append(word.length()).append("\n");
+            }
+        }
+
+        // Выводим результат в jTextField15
+        jTextField15.setText(result.toString());
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    // Очищаем поле вывода перед новым выполнением
+        jTextField16.setText("");
+
+        // Задание: Определить наименьшую из цифр, занимающих во введенной строке четные позиции.
+        System.out.println("34. Определить наименьшую из цифр, занимающих во введенной строке четные позиции.");
+
+        // Считываем строку из jTextField11
+        String input = jTextField11.getText();
+
+        // Проверяем, что строка не пустая
+        if (input == null || input.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Введите строку!");
+            return;
+        }
+
+        // Инициализируем переменную minDigit максимальным значением целого числа
+        int minDigit = Integer.MAX_VALUE;
+
+        // Флаг для проверки наличия хотя бы одной цифры на четных позициях
+        boolean hasDigit = false;
+
+        // Проходим по символам строки, начиная с индекса 0
+        for (int i = 0; i < input.length(); i++) {
+            // Проверяем, является ли текущая позиция нечетной (так как позиции считаются с 1)
+            if (i % 2 != 0) { 
+                // Получаем символ на текущей позиции
+                char ch = input.charAt(i);
+
+                // Проверяем, является ли символ цифрой
+                if (Character.isDigit(ch)) {
+                    // Устанавливаем флаг hasDigit в true, так как найдена хотя бы одна цифра
+                    hasDigit = true;
+
+                    // Преобразуем символ в числовое значение
+                    int digit = Character.getNumericValue(ch);
+
+                    // Если текущее число меньше minDigit, обновляем minDigit
+                    if (digit < minDigit) {
+                        minDigit = digit;
+                    }
+                }
+            }
+        }
+
+        // Если была найдена хотя бы одна цифра на четных позициях, выводим результат
+        if (hasDigit) {
+            jTextField16.setText("Наименьшая цифра на чётных позициях: " + minDigit);
+        } else {
+            // Если цифр на четных позициях не найдено, выводим соответствующее сообщение
+            jTextField16.setText("Цифр на чётных позициях не найдено.");
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField17ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // Очищаем поле вывода перед новым выполнением
+        jTextField12.setText("");
+
+        // Задание: Создать процедуру, позволяющую из заданной строки удалить пробелы.
+        System.out.println("59. Создать процедуру, позволяющую из заданной строки удалить пробелы.");
+
+        // Считываем исходную строку из jTextField17
+        String input = jTextField17.getText();
+
+        // Проверяем, что строка не пустая
+        if (input == null || input.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Введите строку в поле ввода!");
+            return;
+        }
+
+        // Удаляем все пробелы из строки с помощью метода removeSpaces
+        String result = removeSpaces(input);
+
+        // Выводим результат в jTextField12
+        jTextField12.setText(result);
+        
+    }//GEN-LAST:event_jButton8ActionPerformed
+     // Метод для удаления всех пробелов из строки
+    public static String removeSpaces(String input) {
+        // Если строка null или пустая, возвращаем пустую строку
+        if (input == null || input.isEmpty()) {
+            return "";
+        }
+
+        // Используем метод replaceAll() для удаления всех пробельных символов
+        return input.replaceAll("\\s+", ""); 
+    }
     /**
      * @param args the command line arguments
      */
@@ -1029,7 +1297,13 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1051,17 +1325,25 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
